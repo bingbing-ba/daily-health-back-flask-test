@@ -1,7 +1,9 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import requests
 
 app = Flask(__name__)
+CORS(app)
 professors = [
     { 'name': '변승환', 'region': '서울', 'classNo': '1반' },
     { 'name': '유창오', 'region': '서울', 'classNo': '2반' },
